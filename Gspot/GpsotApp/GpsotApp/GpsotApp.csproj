@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{822C6244-6989-481C-BA92-F919B62D711D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GpsotApp</RootNamespace>
+    <AssemblyName>GpsotApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="activities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="activities.Designer.cs">
+      <DependentUpon>activities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalWorks2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalWorks2.Designer.cs">
+      <DependentUpon>AdditionalWorks2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentMonthOutgoings2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurrentMonthOutgoings2.Designer.cs">
+      <DependentUpon>CurrentMonthOutgoings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerTab.Designer.cs">
+      <DependentUpon>CustomerTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet.cs">
+      <DependentUpon>evotsis_gspotDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet121.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet121.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet131.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet131.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet141.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet141.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet151.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet151.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSett.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSett.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSettt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSettt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSetttt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSetttt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSettttt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSettttt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSettttttt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSettttttt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSetttttttt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSetttttttt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KartelaPelath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KartelaPelath.Designer.cs">
+      <DependentUpon>KartelaPelath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaErgasiwn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaErgasiwn.Designer.cs">
+      <DependentUpon>ListaErgasiwn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewOrder.Designer.cs">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outgoings2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Outgoings2.Designer.cs">
+      <DependentUpon>Outgoings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintSize2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintSize2.Designer.cs">
+      <DependentUpon>PrintSize2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintType.Designer.cs">
+      <DependentUpon>PrintType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecificOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecificOrder.Designer.cs">
+      <DependentUpon>SpecificOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StagesOfOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StagesOfOrder.Designer.cs">
+      <DependentUpon>StagesOfOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers2.Designer.cs">
+      <DependentUpon>Suppliers2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Voithitika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Voithitika.Designer.cs">
+      <DependentUpon>Voithitika.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ylika7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ylika7.Designer.cs">
+      <DependentUpon>Ylika7.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="activities.resx">
+      <DependentUpon>activities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalWorks2.resx">
+      <DependentUpon>AdditionalWorks2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurrentMonthOutgoings2.resx">
+      <DependentUpon>CurrentMonthOutgoings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerTab.resx">
+      <DependentUpon>CustomerTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KartelaPelath.resx">
+      <DependentUpon>KartelaPelath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaErgasiwn.resx">
+      <DependentUpon>ListaErgasiwn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewOrder.resx">
+      <DependentUpon>NewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Outgoings2.resx">
+      <DependentUpon>Outgoings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintSize2.resx">
+      <DependentUpon>PrintSize2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintType.resx">
+      <DependentUpon>PrintType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SpecificOrder.resx">
+      <DependentUpon>SpecificOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StagesOfOrder.resx">
+      <DependentUpon>StagesOfOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers2.resx">
+      <DependentUpon>Suppliers2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Voithitika.resx">
+      <DependentUpon>Voithitika.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ylika7.resx">
+      <DependentUpon>Ylika7.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="evotsis_gspotDataSet.xsc">
+      <DependentUpon>evotsis_gspotDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet.xss">
+      <DependentUpon>evotsis_gspotDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet1.xsc">
+      <DependentUpon>evotsis_gspotDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet1.xss">
+      <DependentUpon>evotsis_gspotDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet10.xsc">
+      <DependentUpon>evotsis_gspotDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet10.xss">
+      <DependentUpon>evotsis_gspotDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet11.xsc">
+      <DependentUpon>evotsis_gspotDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet11.xss">
+      <DependentUpon>evotsis_gspotDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet121.xsc">
+      <DependentUpon>evotsis_gspotDataSet121.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet121.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet121.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet121.xss">
+      <DependentUpon>evotsis_gspotDataSet121.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet131.xsc">
+      <DependentUpon>evotsis_gspotDataSet131.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet131.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet131.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet131.xss">
+      <DependentUpon>evotsis_gspotDataSet131.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet141.xsc">
+      <DependentUpon>evotsis_gspotDataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet141.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet141.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet141.xss">
+      <DependentUpon>evotsis_gspotDataSet141.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet151.xsc">
+      <DependentUpon>evotsis_gspotDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet151.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet151.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet151.xss">
+      <DependentUpon>evotsis_gspotDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet16.xsc">
+      <DependentUpon>evotsis_gspotDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet16.xss">
+      <DependentUpon>evotsis_gspotDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet17.xsc">
+      <DependentUpon>evotsis_gspotDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet17.xss">
+      <DependentUpon>evotsis_gspotDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet18.xsc">
+      <DependentUpon>evotsis_gspotDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet18.xss">
+      <DependentUpon>evotsis_gspotDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet19.xsc">
+      <DependentUpon>evotsis_gspotDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet19.xss">
+      <DependentUpon>evotsis_gspotDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet2.xsc">
+      <DependentUpon>evotsis_gspotDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet2.xss">
+      <DependentUpon>evotsis_gspotDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet20.xsc">
+      <DependentUpon>evotsis_gspotDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet20.xss">
+      <DependentUpon>evotsis_gspotDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet26.xsc">
+      <DependentUpon>evotsis_gspotDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet26.xss">
+      <DependentUpon>evotsis_gspotDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet27.xsc">
+      <DependentUpon>evotsis_gspotDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet27.xss">
+      <DependentUpon>evotsis_gspotDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet3.xsc">
+      <DependentUpon>evotsis_gspotDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet3.xss">
+      <DependentUpon>evotsis_gspotDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet30.xsc">
+      <DependentUpon>evotsis_gspotDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet30.xss">
+      <DependentUpon>evotsis_gspotDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet4.xsc">
+      <DependentUpon>evotsis_gspotDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet4.xss">
+      <DependentUpon>evotsis_gspotDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet5.xsc">
+      <DependentUpon>evotsis_gspotDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet5.xss">
+      <DependentUpon>evotsis_gspotDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet6.xsc">
+      <DependentUpon>evotsis_gspotDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet6.xss">
+      <DependentUpon>evotsis_gspotDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet7.xsc">
+      <DependentUpon>evotsis_gspotDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet7.xss">
+      <DependentUpon>evotsis_gspotDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet8.xsc">
+      <DependentUpon>evotsis_gspotDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet8.xss">
+      <DependentUpon>evotsis_gspotDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet9.xsc">
+      <DependentUpon>evotsis_gspotDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet9.xss">
+      <DependentUpon>evotsis_gspotDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSett.xsc">
+      <DependentUpon>evotsis_gspotDataSett.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSett.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSett.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSett.xss">
+      <DependentUpon>evotsis_gspotDataSett.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettt.xsc">
+      <DependentUpon>evotsis_gspotDataSettt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSettt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSettt.xss">
+      <DependentUpon>evotsis_gspotDataSettt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSetttt.xsc">
+      <DependentUpon>evotsis_gspotDataSetttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSetttt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSetttt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSetttt.xss">
+      <DependentUpon>evotsis_gspotDataSetttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettttt.xsc">
+      <DependentUpon>evotsis_gspotDataSettttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettttt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSettttt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSettttt.xss">
+      <DependentUpon>evotsis_gspotDataSettttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettttttt.xsc">
+      <DependentUpon>evotsis_gspotDataSettttttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSettttttt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSettttttt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSettttttt.xss">
+      <DependentUpon>evotsis_gspotDataSettttttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSetttttttt.xsc">
+      <DependentUpon>evotsis_gspotDataSetttttttt.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSetttttttt.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSetttttttt.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSetttttttt.xss">
+      <DependentUpon>evotsis_gspotDataSetttttttt.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
