@@ -1093,5 +1093,15 @@ namespace GpsotApp
                 MessageBox.Show("Cannot connect to database Ypoloipa from InvoiceData2");
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -107,6 +107,7 @@
             this.button8.TabIndex = 9;
             this.button8.Text = "ΝΕΟΣ ΠΕΛΑΤΗΣ";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button1
             // 
@@ -119,6 +120,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "ΝΕΑ ΠΑΡΑΓΓΕΛΙΑ";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
@@ -181,6 +183,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "ΣΤΟΙΧΕΙΑ ADMINISTRATOR";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form1
             // 

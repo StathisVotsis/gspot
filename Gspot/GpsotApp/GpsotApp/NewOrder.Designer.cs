@@ -53,9 +53,7 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.evotsis_gspotDataSet2 = new GpsotApp.evotsis_gspotDataSet2();
             this.invoiceNumberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.invoiceNumberTableAdapter = new GpsotApp.evotsis_gspotDataSet2TableAdapters.InvoiceNumberTableAdapter();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -95,30 +93,19 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.workBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet3 = new GpsotApp.evotsis_gspotDataSet3();
             this.Column2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.ylika7BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet30 = new GpsotApp.evotsis_gspotDataSet30();
             this.Column3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.printSizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet5 = new GpsotApp.evotsis_gspotDataSet5();
             this.Column4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.printTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet6 = new GpsotApp.evotsis_gspotDataSet6();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.additionalWorksBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet7 = new GpsotApp.evotsis_gspotDataSet7();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.evotsis_gspotDataSet4 = new GpsotApp.evotsis_gspotDataSet4();
-            this.workTableAdapter = new GpsotApp.evotsis_gspotDataSet3TableAdapters.WorkTableAdapter();
-            this.materialsTableAdapter = new GpsotApp.evotsis_gspotDataSet4TableAdapters.MaterialsTableAdapter();
-            this.printSizeTableAdapter = new GpsotApp.evotsis_gspotDataSet5TableAdapters.PrintSizeTableAdapter();
-            this.printTypeTableAdapter = new GpsotApp.evotsis_gspotDataSet6TableAdapters.PrintTypeTableAdapter();
-            this.additionalWorksTableAdapter = new GpsotApp.evotsis_gspotDataSet7TableAdapters.AdditionalWorksTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -139,12 +126,10 @@
             this.label23 = new System.Windows.Forms.Label();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.ylika7TableAdapter = new GpsotApp.evotsis_gspotDataSet30TableAdapters.Ylika7TableAdapter();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceNumberBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).BeginInit();
@@ -163,17 +148,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.additionalWorksBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ylika7BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printSizeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printTypeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalWorksBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialsBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet4)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -407,25 +386,15 @@
             this.textBox10.TabIndex = 29;
             this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
-            // evotsis_gspotDataSet2
-            // 
-            this.evotsis_gspotDataSet2.DataSetName = "evotsis_gspotDataSet2";
-            this.evotsis_gspotDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // invoiceNumberBindingSource
             // 
             this.invoiceNumberBindingSource.DataMember = "InvoiceNumber";
-            this.invoiceNumberBindingSource.DataSource = this.evotsis_gspotDataSet2;
-            // 
-            // invoiceNumberTableAdapter
-            // 
-            this.invoiceNumberTableAdapter.ClearBeforeFill = true;
             // 
             // textBox13
             // 
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.Color.Red;
-            this.textBox13.Location = new System.Drawing.Point(518, 3);
+            this.textBox13.Location = new System.Drawing.Point(517, 3);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(102, 20);
             this.textBox13.TabIndex = 35;
@@ -438,7 +407,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(322, 6);
+            this.label16.Location = new System.Drawing.Point(321, 6);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 13);
             this.label16.TabIndex = 36;
@@ -728,7 +697,6 @@
             // Column1
             // 
             this.Column1.DataSource = this.workBindingSource2;
-            this.Column1.DisplayMember = "Name";
             this.Column1.HeaderText = "ΕΡΓΑΣΙΑ";
             this.Column1.Name = "Column1";
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -738,17 +706,10 @@
             // workBindingSource2
             // 
             this.workBindingSource2.DataMember = "Work";
-            this.workBindingSource2.DataSource = this.evotsis_gspotDataSet3;
-            // 
-            // evotsis_gspotDataSet3
-            // 
-            this.evotsis_gspotDataSet3.DataSetName = "evotsis_gspotDataSet3";
-            this.evotsis_gspotDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Column2
             // 
             this.Column2.DataSource = this.ylika7BindingSource;
-            this.Column2.DisplayMember = "DESCRIPTION";
             this.Column2.HeaderText = "ΥΛΙΚΟ";
             this.Column2.Name = "Column2";
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -758,17 +719,10 @@
             // ylika7BindingSource
             // 
             this.ylika7BindingSource.DataMember = "Ylika7";
-            this.ylika7BindingSource.DataSource = this.evotsis_gspotDataSet30;
-            // 
-            // evotsis_gspotDataSet30
-            // 
-            this.evotsis_gspotDataSet30.DataSetName = "evotsis_gspotDataSet30";
-            this.evotsis_gspotDataSet30.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Column3
             // 
             this.Column3.DataSource = this.printSizeBindingSource;
-            this.Column3.DisplayMember = "SIZE";
             this.Column3.HeaderText = "ΜΕΓΕΘΟΣ ΕΚΤΥΠΩΣΗΣ";
             this.Column3.Name = "Column3";
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -778,17 +732,10 @@
             // printSizeBindingSource
             // 
             this.printSizeBindingSource.DataMember = "PrintSize";
-            this.printSizeBindingSource.DataSource = this.evotsis_gspotDataSet5;
-            // 
-            // evotsis_gspotDataSet5
-            // 
-            this.evotsis_gspotDataSet5.DataSetName = "evotsis_gspotDataSet5";
-            this.evotsis_gspotDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Column4
             // 
             this.Column4.DataSource = this.printTypeBindingSource;
-            this.Column4.DisplayMember = "TYPE";
             this.Column4.HeaderText = "ΤΥΠΟΣ ΕΚΤΥΠΩΣΗΣ";
             this.Column4.Name = "Column4";
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -798,12 +745,6 @@
             // printTypeBindingSource
             // 
             this.printTypeBindingSource.DataMember = "PrintType";
-            this.printTypeBindingSource.DataSource = this.evotsis_gspotDataSet6;
-            // 
-            // evotsis_gspotDataSet6
-            // 
-            this.evotsis_gspotDataSet6.DataSetName = "evotsis_gspotDataSet6";
-            this.evotsis_gspotDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Column5
             // 
@@ -814,7 +755,6 @@
             // Column6
             // 
             this.Column6.DataSource = this.additionalWorksBindingSource2;
-            this.Column6.DisplayMember = "NAME";
             this.Column6.HeaderText = "ΕΠΙΠΛΕΟΝ ΕΡΓΑΣΙΕΣ";
             this.Column6.Name = "Column6";
             this.Column6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -824,12 +764,6 @@
             // additionalWorksBindingSource2
             // 
             this.additionalWorksBindingSource2.DataMember = "AdditionalWorks";
-            this.additionalWorksBindingSource2.DataSource = this.evotsis_gspotDataSet7;
-            // 
-            // evotsis_gspotDataSet7
-            // 
-            this.evotsis_gspotDataSet7.DataSetName = "evotsis_gspotDataSet7";
-            this.evotsis_gspotDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Column7
             // 
@@ -852,32 +786,6 @@
             // materialsBindingSource2
             // 
             this.materialsBindingSource2.DataMember = "Materials";
-            this.materialsBindingSource2.DataSource = this.evotsis_gspotDataSet4;
-            // 
-            // evotsis_gspotDataSet4
-            // 
-            this.evotsis_gspotDataSet4.DataSetName = "evotsis_gspotDataSet4";
-            this.evotsis_gspotDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // workTableAdapter
-            // 
-            this.workTableAdapter.ClearBeforeFill = true;
-            // 
-            // materialsTableAdapter
-            // 
-            this.materialsTableAdapter.ClearBeforeFill = true;
-            // 
-            // printSizeTableAdapter
-            // 
-            this.printSizeTableAdapter.ClearBeforeFill = true;
-            // 
-            // printTypeTableAdapter
-            // 
-            this.printTypeTableAdapter.ClearBeforeFill = true;
-            // 
-            // additionalWorksTableAdapter
-            // 
-            this.additionalWorksTableAdapter.ClearBeforeFill = true;
             // 
             // button4
             // 
@@ -896,7 +804,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1036, 6);
+            this.label18.Location = new System.Drawing.Point(1035, 6);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(70, 13);
             this.label18.TabIndex = 64;
@@ -906,7 +814,7 @@
             // 
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.ForeColor = System.Drawing.Color.Red;
-            this.textBox15.Location = new System.Drawing.Point(1112, 3);
+            this.textBox15.Location = new System.Drawing.Point(1111, 3);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(136, 20);
             this.textBox15.TabIndex = 65;
@@ -944,6 +852,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.21875F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1354, 84);
             this.tableLayoutPanel1.TabIndex = 66;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label2
             // 
@@ -994,6 +903,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1354, 226);
             this.tableLayoutPanel2.TabIndex = 44;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // textBox20
             // 
@@ -1193,7 +1103,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.31959F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.68041F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel11.Controls.Add(this.textBox13, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.label18, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.textBox15, 3, 0);
@@ -1205,10 +1115,6 @@
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(1354, 25);
             this.tableLayoutPanel11.TabIndex = 69;
-            // 
-            // ylika7TableAdapter
-            // 
-            this.ylika7TableAdapter.ClearBeforeFill = true;
             // 
             // printDialog1
             // 
@@ -1242,7 +1148,6 @@
             this.Text = "Νέα Παραγγελία created by Stathis Votsis software engineer";
             this.Load += new System.EventHandler(this.NewOrder_Load);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.invoiceNumberBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource1)).EndInit();
@@ -1261,17 +1166,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.additionalWorksBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ylika7BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printSizeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printTypeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.additionalWorksBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.materialsBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.evotsis_gspotDataSet4)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
