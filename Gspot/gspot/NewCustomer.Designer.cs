@@ -101,6 +101,7 @@
             this.button1.TabIndex = 56;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox9
             // 
@@ -330,7 +331,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Νέος Πελάτης created by Stathis Votsis software engineer";
+            this.Text = "g";
+            this.Load += new System.EventHandler(this.NewCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
