@@ -48,6 +48,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="evotsis_gspotDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet52.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet53.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="evotsis_gspotDataSet54.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>evotsis_gspotDataSet54.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +111,61 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="evotsis_gspotDataSet50.xsc">
+      <DependentUpon>evotsis_gspotDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet50.xss">
+      <DependentUpon>evotsis_gspotDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet51.xsc">
+      <DependentUpon>evotsis_gspotDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet51.xss">
+      <DependentUpon>evotsis_gspotDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet52.xsc">
+      <DependentUpon>evotsis_gspotDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet52.xss">
+      <DependentUpon>evotsis_gspotDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet53.xsc">
+      <DependentUpon>evotsis_gspotDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet53.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet53.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet53.xss">
+      <DependentUpon>evotsis_gspotDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet54.xsc">
+      <DependentUpon>evotsis_gspotDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="evotsis_gspotDataSet54.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>evotsis_gspotDataSet54.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="evotsis_gspotDataSet54.xss">
+      <DependentUpon>evotsis_gspotDataSet54.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

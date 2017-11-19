@@ -1,0 +1,1 @@
+evotsis_gspotConnectionString
