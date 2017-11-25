@@ -35,5 +35,11 @@ namespace gspot
             NewCustomer myform = new NewCustomer();
             myform.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            KartelaPelath myform = new KartelaPelath();
+            myform.Show();
+        }
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-namespace GpsotApp
+namespace gspot
 {
     public partial class SpecificOrder : Form
     {
@@ -29,11 +29,7 @@ namespace GpsotApp
         DateTimePicker oDateTimePicker13 = new DateTimePicker();//calendar
         DateTimePicker oDateTimePicker14 = new DateTimePicker();//calendar
         DateTimePicker oDateTimePicker15 = new DateTimePicker();//calendar
-        public SpecificOrder()
-        {
-            InitializeComponent();
-        }
-        //DataTable dbdataset;
+                                                                //DataTable dbdataset;
         DataTable dt = new DataTable();
         //DataTable dbdataset2;
         int flag1 = 1;
@@ -44,47 +40,21 @@ namespace GpsotApp
         public string MyProperty11 { get; set; }
         public string MyProperty12 { get; set; }
         //string date1;
-        /// <summary>
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SpecificOrder_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet1.Ylika7' table. You can move, or remove it, as needed.
-            this.ylika7TableAdapter.Fill(this.evotsis_gspotDataSet1.Ylika7);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet16.AdditionalWorks' table. You can move, or remove it, as needed.
-            this.additionalWorksTableAdapter.Fill(this.evotsis_gspotDataSet16.AdditionalWorks);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet15.PrintType' table. You can move, or remove it, as needed.
-            this.printTypeTableAdapter.Fill(this.evotsis_gspotDataSet15.PrintType);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet14.PrintSize' table. You can move, or remove it, as needed.
-            this.printSizeTableAdapter.Fill(this.evotsis_gspotDataSet14.PrintSize);         
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet12.Work' table. You can move, or remove it, as needed.
-            this.workTableAdapter.Fill(this.evotsis_gspotDataSet12.Work);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet11.InvoiceData1' table. You can move, or remove it, as needed.
 
-            try
-            {
-                
-                Fillcombo2();
-                Fillcombo4();
-                //this.invoiceData1TableAdapter.Fill(this.evotsis_gspotDataSet11.InvoiceData1);
-                this.invoiceData1TableAdapter.FillBy(this.evotsis_gspotDataSet11.InvoiceData1, MyProperty11, MyProperty12);
-                this.pLHRWMESTableAdapter.FillBy(this.evotsis_gspotDataSet17.PLHRWMES, MyProperty11, MyProperty12);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Το σύστημα δεν μπορεί να συνδεθεί στη βάση δεδομένων PLHRWMES,Customers");
-            }
+        public SpecificOrder()
+        {
+            InitializeComponent();
         }
 
-/// <summary>
-/// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/// </summary>
+        private void SpecificOrder_Load(object sender, EventArgs e)
+        {
+
+        }
+
         void Fillcombo2()//ΓΕΜΙΣΜΑ ΣΤΟΙΧΕΙΩΝ ΠΕΛΑΤΗ ΠΑΡΑΓΓΕΛΙΑΣ ΟΝ LOAD
         {
 
-            string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
             string Query = "select SURNAME,NAME,AFM,ADRESS,CITY,PHONE,CELL,FAX,EMAIL from evotsis_gspot.Customers where ID = '" + MyProperty12 + "';";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -114,7 +84,7 @@ namespace GpsotApp
                 MessageBox.Show("Cannot connect to Customers ");
             }
 
-            string myConnection7 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+            string myConnection7 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
             string Query7 = "select PARATHRHSEIS,STADIOPARAGGELIAS,HMEROMHNIAPARAGGELIAS,PROKATAVOLH,YPOLOIPO,SYNOLIKOKOSTOS,HMEROMHNIAPARADOSHS from evotsis_gspot.InvoiceData2 where AA = '" + MyProperty11 + "' and ID = '" + MyProperty12 + "';";
             MySqlConnection myConn7 = new MySqlConnection(myConnection7);
             MySqlCommand cmdDatabase7 = new MySqlCommand(Query7, myConn7);
@@ -127,7 +97,7 @@ namespace GpsotApp
                 {
                     textBox1.Text = myReader7.GetString("PARATHRHSEIS");//one reading in parameter
                     comboBox1.Text = myReader7.GetString("STADIOPARAGGELIAS");//one reading in parameter
-                    
+
                     textBox15.Text = Convert.ToDateTime(myReader7.GetString("HMEROMHNIAPARAGGELIAS")).ToString("yyyy/MM/dd");//one reading in parameter//////////////////////////////////////////////////////////////////////////////////////
                     textBox3.Text = myReader7.GetString("PROKATAVOLH");//one reading in parameter
                     textBox4.Text = myReader7.GetString("YPOLOIPO");//one reading in parameter
@@ -143,15 +113,6 @@ namespace GpsotApp
             {
 
             }
-
-
-
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void dateTimePicker_OnTextChange(object sender, EventArgs e)
@@ -178,6 +139,11 @@ namespace GpsotApp
         {
             // Hiding the control after use   
             oDateTimePicker2.Visible = false;
+        }
+
+        private void textBox15_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox15_Click(object sender, EventArgs e)
@@ -244,14 +210,9 @@ namespace GpsotApp
             oDateTimePicker2.Visible = true;
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
             string Query = "select * from evotsis_gspot.StagesOfOrder where TYPE = '" + comboBox1.Text + "';";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -271,13 +232,12 @@ namespace GpsotApp
             {
                 MessageBox.Show("Cannot connect to database");
             }
-
         }
 
         void Fillcombo4()
         {
 
-            string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
             string Query = "select * from evotsis_gspot.StagesOfOrder ;";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -302,6 +262,7 @@ namespace GpsotApp
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.ColumnIndex == 1)
             {
                 //Initialized a new DateTimePicker Control  
@@ -653,7 +614,7 @@ namespace GpsotApp
             }
         }
 
-        private void dateTimePicker_OnTextChange4(object sender, EventArgs e)
+       private void dateTimePicker_OnTextChange4(object sender, EventArgs e)
         {
             // Saving the 'Selected Date on Calendar' into DataGridView current cell  
             dataGridView1.CurrentCell.Value = oDateTimePicker4.Text.ToString();
@@ -843,7 +804,7 @@ namespace GpsotApp
                 if (!string.IsNullOrEmpty(textBox3.Text))
                 {
                     sum2 = sum2 - Convert.ToDouble(textBox3.Text);
-                  
+
 
                 }
 
@@ -858,10 +819,10 @@ namespace GpsotApp
                             { sum2 = sum2 - Convert.ToDouble(dgRow2.Cells[i].Value.ToString()); }
                         }
                         i = i + 1;
-                         
+
                     }
                 }
-                
+
                 textBox4.Text = sum2.ToString();
 
             }
@@ -889,7 +850,7 @@ namespace GpsotApp
             catch (Exception) { }
             if (flag1 == 1 && flag2 == 1)
             {
-                string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                 string Query = "update evotsis_gspot.Customers set SURNAME = '" + textBox6.Text + "',NAME = '" + textBox7.Text + "' ,AFM = '" + textBox8.Text + "' ,ADRESS = '" + textBox9.Text + "' ,CITY = '" + textBox10.Text + "' ,PHONE = '" + textBox11.Text + "' ,CELL = '" + textBox12.Text + "' ,FAX = '" + textBox13.Text + "' ,EMAIL = '" + textBox14.Text + "' where ID = '" + MyProperty12 + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -910,8 +871,9 @@ namespace GpsotApp
                     MessageBox.Show("1");
                 }
                 //SelectedItem.ToString()
-                string myConnection3 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
-                try {
+                string myConnection3 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                try
+                {
                     MySqlConnection myConn3 = new MySqlConnection(myConnection3);
                     string Query3 = "update evotsis_gspot.InvoiceData2 set PARATHRHSEIS = '" + textBox1.Text + "',STADIOPARAGGELIAS = '" + comboBox1.Text + "',HMEROMHNIAPARAGGELIAS = '" + Convert.ToDateTime(textBox15.Text).ToString("yyyy-MM-dd") + "',PROKATAVOLH = '" + textBox3.Text + "',YPOLOIPO = '" + textBox4.Text + "',SYNOLIKOKOSTOS = '" + textBox2.Text + "',HMEROMHNIAPARADOSHS = '" + Convert.ToDateTime(textBox16.Text).ToString("yyyy-MM-dd") + "'  where AA = '" + MyProperty11 + "'and ID = '" + MyProperty12 + "' ;";
                     MySqlCommand cmdDatabase3 = new MySqlCommand(Query3, myConn3);
@@ -932,7 +894,7 @@ namespace GpsotApp
                 }
                 catch (Exception) { MessageBox.Show("3"); }
 
-                
+
 
                 int count = 0;
                 foreach (DataGridViewRow dgRow in dataGridView1.Rows)
@@ -941,7 +903,7 @@ namespace GpsotApp
                     {
                         try
                         {
-                            string myConnection2 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                            string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                                                                                                                                   //
                             MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
@@ -990,7 +952,7 @@ namespace GpsotApp
                         }
                         count++;
                     }
-                    
+
 
                 }
                 int count2 = 1;
@@ -1008,8 +970,8 @@ namespace GpsotApp
                         {
                             count4 = count3 + 1;
                             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            string myConnection5 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
-                            string Query5 = "select ERGASIA from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "' and ID = '" + MyProperty12 + "' and AAP = '"+count4.ToString()+"';";
+                            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                            string Query5 = "select ERGASIA from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "' and ID = '" + MyProperty12 + "' and AAP = '" + count4.ToString() + "';";
                             MySqlConnection myConn5 = new MySqlConnection(myConnection5);
                             MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);
                             MySqlDataReader myReader5;
@@ -1019,7 +981,7 @@ namespace GpsotApp
                                 myReader5 = cmdDatabase5.ExecuteReader();
                                 while (myReader5.Read())
                                 {
-                                    
+
                                     count5 = 1;
                                     //MessageBox.Show(count5.ToString());
                                 }
@@ -1031,10 +993,10 @@ namespace GpsotApp
                                 MessageBox.Show("Cannot connect to database");
                             }
                             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            if (count5==1)
+                            if (count5 == 1)
                             {
                                 count5 = 0;
-                                string myConnection2 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                                                                                                                                       //
                                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
@@ -1067,7 +1029,7 @@ namespace GpsotApp
                             {
                                 try
                                 {
-                                    string myConnection2 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters                                                                                                      //
+                                    string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters                                                                                                      //
                                     MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                                     MySqlCommand cmd = new MySqlCommand();
                                     cmd = myConn2.CreateCommand();
@@ -1098,7 +1060,7 @@ namespace GpsotApp
 
                                 }
                             }
-                            
+
 
                         }
 
@@ -1109,10 +1071,9 @@ namespace GpsotApp
                         }
                     }
                 }
-               
+
 
             }
-            
         }
 
         private void dataGridView2_KeyUp(object sender, KeyEventArgs e)
@@ -1134,13 +1095,14 @@ namespace GpsotApp
                 }
                 base.OnKeyDown(e);
             }
-            catch (Exception) {  }
+            catch (Exception) { }
         }
 
         private void dataGridView2_KeyDown(object sender, KeyEventArgs e)
         {
             try
-            { if (e.KeyCode == Keys.Tab)
+            {
+                if (e.KeyCode == Keys.Tab)
                 {
                     foreach (DataGridViewRow dgRow in dataGridView2.Rows)
                     {
@@ -1155,7 +1117,8 @@ namespace GpsotApp
                 }
                 base.OnKeyDown(e);
             }
-            catch (Exception) { //MessageBox.Show("Υπολογισμός σε άδεια γραμμή δεν επιτρέπεται");
+            catch (Exception)
+            { //MessageBox.Show("Υπολογισμός σε άδεια γραμμή δεν επιτρέπεται");
             }
         }
 
@@ -1176,7 +1139,7 @@ namespace GpsotApp
 
         private void dataGridView2_Enter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1237,7 +1200,7 @@ namespace GpsotApp
                             if (!string.IsNullOrEmpty(dgRow2.Cells[i].Value.ToString()))
                             {
                                 double sum3 = Convert.ToDouble(dgRow2.Cells[i].Value.ToString());
-                                if (sum2==0)
+                                if (sum2 == 0)
                                 {
                                     sum2 = sum3;
                                 }
@@ -1255,11 +1218,12 @@ namespace GpsotApp
                 textBox4.Text = sum2.ToString();
 
             }
-            
+
         }
 
         private void print_button_Click(object sender, EventArgs e)
         {
+
             try
             {
                 button1.PerformClick();
@@ -1274,7 +1238,7 @@ namespace GpsotApp
             printDialog1.Document = printDocument1;
             printDocument1.DefaultPageSettings.Landscape = true;//reverse page
             printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
-           
+
             DialogResult result = printDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -1285,7 +1249,7 @@ namespace GpsotApp
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            
+
             Graphics graphic = e.Graphics;
             Font font = new Font("Order", 12);
             float fontHeight = font.GetHeight();
@@ -1295,9 +1259,9 @@ namespace GpsotApp
             graphic.DrawString("ΠΑΡΑΓΓΕΛΙΑ", new Font("Order", 18), new SolidBrush(Color.Black), 450, 4);
             graphic.DrawString("ΗΜΕΡΟΜΗΝΙΑ ΠΑΡΑΓΓΕΛΙΑΣ", new Font("Order", 11), new SolidBrush(Color.Black), startX + offset, 33);
             graphic.DrawString(textBox15.Text, new Font("Order", 9), new SolidBrush(Color.Black), startX + offset + 2, 51);
-           
-            
-           
+
+
+
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             graphic.DrawString("ΕΠΙΘΕΤΟ", new Font("Order", 10), new SolidBrush(Color.Black), startX + offset + 3, startY + 60);
             graphic.DrawString(textBox6.Text, new Font("Order", 8), new SolidBrush(Color.Black), startX + offset + 3, startY + 80);
@@ -1339,44 +1303,44 @@ namespace GpsotApp
             graphic.DrawString("ΤΙΜΗ ΜΟΝ", new Font("Order", 9), new SolidBrush(Color.Black), startX + 964, startY + 160);
             graphic.DrawString("ΚΟΣΤΟΣ", new Font("Order", 9), new SolidBrush(Color.Black), startX + 1035, startY + 160);
             int offset2 = 180;
-           
-            
+
+
             foreach (DataGridViewRow dgRow in dataGridView2.Rows)
             {
-               graphic.DrawString(dgRow.Cells[0].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + offset2);
-               graphic.DrawString(dgRow.Cells[1].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 125, startY + offset2);
-               //graphic.DrawString(dgRow.Cells[2].FormattedValue.ToString(), new Font("Order", 6), new SolidBrush(Color.Black), startX + 245, startY + offset2);//ΜΕΓΕΘΗ ΕΚΤΥΠΩΣΗΣ
-               graphic.DrawString(dgRow.Cells[3].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 330, startY + offset2);
-               string str = dgRow.Cells[4].FormattedValue.ToString();
+                graphic.DrawString(dgRow.Cells[0].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + offset2);
+                graphic.DrawString(dgRow.Cells[1].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 125, startY + offset2);
+                //graphic.DrawString(dgRow.Cells[2].FormattedValue.ToString(), new Font("Order", 6), new SolidBrush(Color.Black), startX + 245, startY + offset2);//ΜΕΓΕΘΗ ΕΚΤΥΠΩΣΗΣ
+                graphic.DrawString(dgRow.Cells[3].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 330, startY + offset2);
+                string str = dgRow.Cells[4].FormattedValue.ToString();
                 int i = str.Length;
                 if (i <= 40) { graphic.DrawString(str, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2); }
-                if (i > 40 && i <=80)
+                if (i > 40 && i <= 80)
                 {
-                    string str1 = str.Substring(0,40);
+                    string str1 = str.Substring(0, 40);
                     graphic.DrawString(str1, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2);
-                    string str2 =  str.Substring(40);
+                    string str2 = str.Substring(40);
                     graphic.DrawString(str2, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2 + 10);
                 }
                 if (i > 80 && i <= 120)
                 {
                     string str1 = str.Substring(0, 40);
                     graphic.DrawString(str1, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2);
-                    string str2 = str.Substring(40,40);
+                    string str2 = str.Substring(40, 40);
                     graphic.DrawString(str2, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2 + 10);
                     string str3 = str.Substring(80);
                     graphic.DrawString(str3, new Font("Order", 6), new SolidBrush(Color.Black), startX + 520, startY + offset2 + 20);
                 }
 
-               graphic.DrawString(dgRow.Cells[5].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 750, startY + offset2);
-               graphic.DrawString(dgRow.Cells[6].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 890, startY + offset2);
-               graphic.DrawString(dgRow.Cells[7].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 964, startY + offset2);
-               graphic.DrawString(dgRow.Cells[8].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 1035, startY + offset2);
-               offset2 += 35;
+                graphic.DrawString(dgRow.Cells[5].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 750, startY + offset2);
+                graphic.DrawString(dgRow.Cells[6].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 890, startY + offset2);
+                graphic.DrawString(dgRow.Cells[7].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 964, startY + offset2);
+                graphic.DrawString(dgRow.Cells[8].FormattedValue.ToString(), new Font("Order", 7), new SolidBrush(Color.Black), startX + 1035, startY + offset2);
+                offset2 += 35;
             }
             graphic.DrawRectangle(Pens.Black, startX - 10, startY - 10 + 535, 1320, 125);
             graphic.DrawString("ΠΛΗΡΩΜΗ1", new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + 535);
             graphic.DrawString(dataGridView1.Rows[0].Cells[0].FormattedValue.ToString(), new Font("Order", 5), new SolidBrush(Color.Black), startX, startY + 563);
-            graphic.DrawString("ΗΜΕΡΟΜΗΝΙΑ1", new Font("Order", 7), new SolidBrush(Color.Black), startX +63, startY + 535);
+            graphic.DrawString("ΗΜΕΡΟΜΗΝΙΑ1", new Font("Order", 7), new SolidBrush(Color.Black), startX + 63, startY + 535);
             graphic.DrawString(dataGridView1.Rows[0].Cells[1].FormattedValue.ToString(), new Font("Order", 5), new SolidBrush(Color.Black), startX + 63, startY + 563);
             graphic.DrawString("ΠΛΗΡΩΜΗ2", new Font("Order", 7), new SolidBrush(Color.Black), startX + 145, startY + 535);
             graphic.DrawString(dataGridView1.Rows[0].Cells[2].FormattedValue.ToString(), new Font("Order", 5), new SolidBrush(Color.Black), startX + 145, startY + 563);
@@ -1445,7 +1409,7 @@ namespace GpsotApp
             {
                 string str12 = str11.Substring(0, 80);
                 graphic.DrawString(str12, new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + 687);
-                string str13 = str11.Substring(80,80);
+                string str13 = str11.Substring(80, 80);
                 graphic.DrawString(str13, new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + 697);
                 string str14 = str11.Substring(120);
                 graphic.DrawString(str14, new Font("Order", 7), new SolidBrush(Color.Black), startX, startY + 707);
@@ -1463,11 +1427,6 @@ namespace GpsotApp
             graphic.DrawString("+ ΦΠΑ 24 %", new Font("Order", 9), new SolidBrush(Color.Black), startX + 754, startY + 765);
             graphic.DrawString(textBox5.Text, new Font("Order", 9), new SolidBrush(Color.Black), startX + 904, startY + 765);
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -1489,7 +1448,7 @@ namespace GpsotApp
         void Fillcombo7()
         {
             double sum = 0;
-            string myConnection5 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
             string Query5 = "select * from evotsis_gspot.InvoiceData2 where ID = '" + MyProperty12 + "';";
             MySqlConnection myConn5 = new MySqlConnection(myConnection5);
             MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);
@@ -1500,11 +1459,11 @@ namespace GpsotApp
                 myReader5 = cmdDatabase5.ExecuteReader();
                 while (myReader5.Read())
                 {
-                    
+
                     string str1 = myReader5.GetString("YPOLOIPO");//one reading in parameter
-                     sum += Convert.ToDouble(str1); 
-                    
-                  
+                    sum += Convert.ToDouble(str1);
+
+
                 }
                 myConn5.Close();
                 textBox17.Text = sum.ToString();
@@ -1519,8 +1478,8 @@ namespace GpsotApp
         {
             if (MessageBox.Show("Διαγραφή Παραγγελίας?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                string myConnection5 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
-                string Query5 = "delete from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "';"; 
+                string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string Query5 = "delete from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "';";
                 MySqlConnection myConn5 = new MySqlConnection(myConnection5);
                 MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);
                 MySqlDataReader myReader5;
@@ -1530,31 +1489,28 @@ namespace GpsotApp
                     myConn5.Open();
                     myReader5 = cmdDatabase5.ExecuteReader();
                     myConn5.Close();
-                  
-
-                   
                 }
                 catch (Exception)
                 {
                     MessageBox.Show("Error on deleting InvoiceData1");
                 }
 
-               
+
                 string Query6 = "delete from evotsis_gspot.InvoiceData2 where AA = '" + MyProperty11 + "';";
                 MySqlConnection myConn6 = new MySqlConnection(myConnection5);
                 MySqlCommand cmdDatabase6 = new MySqlCommand(Query6, myConn6);
                 MySqlDataReader myReader6;
-            
+
                 try
                 {
                     myConn6.Open();
-                 
-                    myReader6 = cmdDatabase6.ExecuteReader();
-                   
-                    myConn6.Close();
-                   
 
-                    
+                    myReader6 = cmdDatabase6.ExecuteReader();
+
+                    myConn6.Close();
+
+
+
                 }
                 catch (Exception)
                 {
@@ -1582,6 +1538,7 @@ namespace GpsotApp
                 }
 
             }
-        }
+        
+         }
     }
 }

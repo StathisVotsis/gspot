@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
-namespace GpsotApp
+namespace gspot
 {
     public partial class CustomerTab : Form
     {
@@ -19,16 +19,12 @@ namespace GpsotApp
         DateTimePicker oDateTimePicker2 = new DateTimePicker();//calendar 
         DateTimePicker oDateTimePicker3 = new DateTimePicker();//calendar 
         DateTimePicker oDateTimePicker4 = new DateTimePicker();//calendar 
-        double totalsum=0;
+        double totalsum = 0;
         double totalsum2 = 0;
         int offset2 = 180;
         int count = 0;
         int i;
         int flag = 0;
-        public CustomerTab()
-        {
-            InitializeComponent();
-        }
         DataTable dbdataset;
         DataTable dt = new DataTable();
         public string MyProperty1 { get; set; }
@@ -41,6 +37,11 @@ namespace GpsotApp
         public string MyProperty8 { get; set; }
         public string MyProperty9 { get; set; }
         public string MyProperty10 { get; set; }
+
+        public CustomerTab()
+        {
+            InitializeComponent();
+        }
 
         private void CustomerTab_Load(object sender, EventArgs e)
         {
@@ -66,8 +67,8 @@ namespace GpsotApp
         void Fillcombo1()
         {
 
-            string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
-            string Query = "select AA, PARATHRHSEIS, STADIOPARAGGELIAS, HMEROMHNIAPARAGGELIAS, PROKATAVOLH, YPOLOIPO, ID, SYNOLIKOKOSTOS, HMEROMHNIAPARADOSHS  from evotsis_gspot.InvoiceData2 where ID ='"+MyProperty10+"';";
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string Query = "select AA, PARATHRHSEIS, STADIOPARAGGELIAS, HMEROMHNIAPARAGGELIAS, PROKATAVOLH, YPOLOIPO, ID, SYNOLIKOKOSTOS, HMEROMHNIAPARADOSHS  from evotsis_gspot.InvoiceData2 where ID ='" + MyProperty10 + "';";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
 
@@ -104,71 +105,12 @@ namespace GpsotApp
                 dataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridView1.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 dataGridView1.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
             }
             catch (Exception)
             {
                 MessageBox.Show("Cannot connect to database InvoiceData2");
             }
 
-
-
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void textBox10_TextChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private void dateTimePicker_OnTextChange(object sender, EventArgs e)
@@ -195,6 +137,11 @@ namespace GpsotApp
         {
             // Hiding the control after use   
             oDateTimePicker2.Visible = false;
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void textBox11_Click(object sender, EventArgs e)
@@ -261,11 +208,6 @@ namespace GpsotApp
             oDateTimePicker2.Visible = true;
         }
 
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void textBox14_Click(object sender, EventArgs e)
         {
             //Initialized a new DateTimePicker Control  
@@ -296,7 +238,6 @@ namespace GpsotApp
 
             // Now make it visible  
             oDateTimePicker3.Visible = true;
-
         }
 
         void oDateTimePicker_CloseUp3(object sender, EventArgs e)
@@ -357,13 +298,11 @@ namespace GpsotApp
             oDateTimePicker4.Visible = true;
         }
 
-       
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox14.Text) && string.IsNullOrEmpty(textBox15.Text))
             {
-                string myConnection2 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                 string Query2 = "select YPOLOIPO from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' ;";
                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                 MySqlCommand cmdDatabase2 = new MySqlCommand(Query2, myConn2);
@@ -399,7 +338,7 @@ namespace GpsotApp
             }
             else
             {
-                string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                 string Query = "select YPOLOIPO from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' and HMEROMHNIAPARAGGELIAS between '" + Convert.ToDateTime(textBox14.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(textBox15.Text).ToString("yyyy-MM-dd") + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -427,16 +366,6 @@ namespace GpsotApp
             }
         }
 
-        private void textBox14_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox15_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             textBox10.Text = null;
@@ -447,11 +376,11 @@ namespace GpsotApp
             textBox15.Text = null;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox11.Text) && string.IsNullOrEmpty(textBox10.Text))
             {
-                string myConnection2 = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                 string Query2 = "select SYNOLIKOKOSTOS from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' ;";
                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                 MySqlCommand cmdDatabase2 = new MySqlCommand(Query2, myConn2);
@@ -487,7 +416,7 @@ namespace GpsotApp
             }
             else
             {
-                string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
                 string Query = "select SYNOLIKOKOSTOS from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' and HMEROMHNIAPARAGGELIAS between '" + Convert.ToDateTime(textBox11.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(textBox10.Text).ToString("yyyy-MM-dd") + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -531,31 +460,28 @@ namespace GpsotApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-                string myConnection = "datasource=50.87.144.102;port=3306;username=evotsis_gspot;password=gspot@123";//connection parameters
-                string Query = "update evotsis_gspot.Customers set SURNAME = '" + textBox1.Text + "',NAME = '" + textBox2.Text+ "' ,AFM = '" + textBox3.Text + "' ,ADRESS = '" + textBox4.Text + "' ,CITY = '" + textBox5.Text + "' ,PHONE = '" + textBox6.Text + "' ,CELL = '" + textBox7.Text + "' ,FAX = '" + textBox8.Text + "' ,EMAIL = '" + textBox9.Text + "' where ID = '" + MyProperty10 + "';";
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-                MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
-                MySqlDataReader myReader;
-                try
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string Query = "update evotsis_gspot.Customers set SURNAME = '" + textBox1.Text + "',NAME = '" + textBox2.Text + "' ,AFM = '" + textBox3.Text + "' ,ADRESS = '" + textBox4.Text + "' ,CITY = '" + textBox5.Text + "' ,PHONE = '" + textBox6.Text + "' ,CELL = '" + textBox7.Text + "' ,FAX = '" + textBox8.Text + "' ,EMAIL = '" + textBox9.Text + "' where ID = '" + MyProperty10 + "';";
+            MySqlConnection myConn = new MySqlConnection(myConnection);
+            MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
+            MySqlDataReader myReader;
+            try
+            {
+                myConn.Open();
+                myReader = cmdDatabase.ExecuteReader();
+                while (myReader.Read())
                 {
-                    myConn.Open();
-                    myReader = cmdDatabase.ExecuteReader();
-                    while (myReader.Read())
-                    {
 
-                    }
-                    myConn.Close();
-                    MessageBox.Show("Τα στοιχεία ανανεώθηκαν επιτυχώς");
-            }
-                catch (Exception)
-                {
-                    MessageBox.Show("Το πρόγραμμα δεν μπορεί, να συνδεθεί στη βάση δεδομένων Custmers για ανανέωση");
                 }
-            
-
+                myConn.Close();
+                MessageBox.Show("Τα στοιχεία ανανεώθηκαν επιτυχώς");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Το πρόγραμμα δεν μπορεί, να συνδεθεί στη βάση δεδομένων Custmers για ανανέωση");
+            }
         }
-/////////////////////////////////////////////////////ΕΚΤΥΠΩΣΗ//////////////////////////////////////////////////////////////////////////////////////////////////////
+
         private void print_button_Click(object sender, EventArgs e)
         {
             try
@@ -649,8 +575,8 @@ namespace GpsotApp
                 graphic.DrawString("ΣΥΝΟΛΙΚΟ ΚΟΣΤΟΣ", new Font("Order", 9), new SolidBrush(Color.Black), startX + 825, startY + 20);
                 graphic.DrawString("ΗΜ.ΠΑΡΑΔΟΣΗΣ", new Font("Order", 9), new SolidBrush(Color.Black), startX + 964, startY + 20);
             }
-            
-            for (i =count;i<dataGridView1.RowCount;i++)
+
+            for (i = count; i < dataGridView1.RowCount; i++)
             {
                 string str = dataGridView1.Rows[i].Cells[1].FormattedValue.ToString();
                 str = Regex.Replace(str, @"\s+", " ", RegexOptions.Multiline);
@@ -697,7 +623,7 @@ namespace GpsotApp
             graphic.DrawLine(blackPen2, startX + 330, startY + 700, startX + 330, startY + 1000);
             graphic.DrawLine(blackPen2, startX + 520, startY + 700, startX + 520, startY + 1000);
             graphic.DrawString("ΣΥΝΟΛΟ ΚΟΣΤΟΥΣ", new Font("Order", 11), new SolidBrush(Color.Black), startX + 164, startY + 720);
-            graphic.DrawString("ΣΥΝΟΛΟ ΠΛΗΡΩΜΩΝ", new Font("Order", 11), new SolidBrush(Color.Black),startX + 344, startY + 720);
+            graphic.DrawString("ΣΥΝΟΛΟ ΠΛΗΡΩΜΩΝ", new Font("Order", 11), new SolidBrush(Color.Black), startX + 344, startY + 720);
             graphic.DrawString("ΥΠΟΛΟΙΠΟ", new Font("Order", 11), new SolidBrush(Color.Black), startX + 534, startY + 720);
             graphic.DrawString("created by", new Font("Order", 7), new SolidBrush(Color.Black), startX + 870, startY + 720);
             graphic.DrawString("Stathis Votsis", new Font("Order", 7), new SolidBrush(Color.Black), startX + 870, startY + 735);
@@ -743,8 +669,5 @@ namespace GpsotApp
             NewOrder myform = new NewOrder();
             myform.Show();
         }
-
-       
     }
-    
 }
