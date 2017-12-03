@@ -115,7 +115,7 @@ namespace gspot
             DV.RowFilter = string.Format("CELL LIKE '%{0}%'", textBox3.Text);
             dataGridView1.DataSource = DV;
         }
-
+      
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -163,6 +163,5 @@ namespace gspot
                 frm2.Show();
             }
         }
-
     }
 }

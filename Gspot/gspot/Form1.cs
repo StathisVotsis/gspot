@@ -41,5 +41,11 @@ namespace gspot
             KartelaPelath myform = new KartelaPelath();
             myform.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ListaErgasiwn myform = new ListaErgasiwn();
+            myform.Show();
+        }
     }
 }

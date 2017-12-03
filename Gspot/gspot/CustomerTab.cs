@@ -444,19 +444,7 @@ namespace gspot
             }
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
-                string string1 = row.Cells["AA"].Value.ToString();
-                string string2 = row.Cells["ID"].Value.ToString();
-                SpecificOrder frm3 = new SpecificOrder();
-                frm3.MyProperty11 = string1;
-                frm3.MyProperty12 = string2;
-                frm3.Show();
-            }
-        }
+      
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -668,6 +656,20 @@ namespace gspot
         {
             NewOrder myform = new NewOrder();
             myform.Show();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+                string string1 = row.Cells["AA"].Value.ToString();
+                string string2 = row.Cells["ID"].Value.ToString();
+                SpecificOrder frm3 = new SpecificOrder();
+                frm3.MyProperty11 = string1;
+                frm3.MyProperty12 = string2;
+                frm3.Show();
+            }
         }
     }
 }

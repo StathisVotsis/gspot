@@ -95,6 +95,7 @@
             this.button7.TabIndex = 8;
             this.button7.Text = "ΛΙΣΤΑ ΕΡΓΑΣΙΩΝ";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

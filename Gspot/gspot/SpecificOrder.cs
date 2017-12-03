@@ -48,7 +48,30 @@ namespace gspot
 
         private void SpecificOrder_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet61.AdditionalWorks' table. You can move, or remove it, as needed.
+            this.additionalWorksTableAdapter.Fill(this.evotsis_gspotDataSet61.AdditionalWorks);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet60.PrintType' table. You can move, or remove it, as needed.
+            this.printTypeTableAdapter.Fill(this.evotsis_gspotDataSet60.PrintType);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet59.PrintSize' table. You can move, or remove it, as needed.
+            this.printSizeTableAdapter.Fill(this.evotsis_gspotDataSet59.PrintSize);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet58.Ylika7' table. You can move, or remove it, as needed.
+            this.ylika7TableAdapter.Fill(this.evotsis_gspotDataSet58.Ylika7);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet57.Work' table. You can move, or remove it, as needed.
+            this.workTableAdapter.Fill(this.evotsis_gspotDataSet57.Work);
 
+
+            try
+            {
+
+                Fillcombo2();
+                Fillcombo4();
+                this.invoiceData1TableAdapter.FillBy(this.evotsis_gspotDataSet55.InvoiceData1, MyProperty11, MyProperty12);
+                this.pLHRWMESTableAdapter.FillBy(this.evotsis_gspotDataSet56.PLHRWMES, MyProperty11, MyProperty12);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Το σύστημα δεν μπορεί να συνδεθεί στη βάση δεδομένων PLHRWMES,Customers");
+            }
         }
 
         void Fillcombo2()//ΓΕΜΙΣΜΑ ΣΤΟΙΧΕΙΩΝ ΠΕΛΑΤΗ ΠΑΡΑΓΓΕΛΙΑΣ ΟΝ LOAD
@@ -1540,5 +1563,7 @@ namespace gspot
             }
         
          }
+
+      
     }
 }
