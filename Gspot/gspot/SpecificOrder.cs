@@ -846,7 +846,7 @@ namespace gspot
                     }
                 }
 
-                textBox4.Text = sum2.ToString();
+                textBox4.Text = (Math.Round(sum2, 2).ToString());
 
             }
             try
@@ -1186,9 +1186,9 @@ namespace gspot
                     {
                         if (!string.IsNullOrEmpty(dgRow.Cells[8].Value.ToString())) //Check for empty string
                         {
-                            sum2 = sum2 + Convert.ToDouble(dgRow.Cells[8].Value.ToString());
+                            sum2 = sum2 + Convert.ToDouble(dgRow.Cells[8].Value.ToString());/////ΕΔςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςςς
                             textBox2.Text = sum2.ToString();
-                            textBox5.Text = ((sum2 * 23) / 100).ToString();
+                            textBox5.Text = ((sum2 * 24) / 100).ToString();
                             flag1 = 1;
                         }
                         else
@@ -1208,7 +1208,7 @@ namespace gspot
 
                 if (!string.IsNullOrEmpty(textBox3.Text))
                 {
-                    sum2 = sum2 - Convert.ToDouble(textBox3.Text);
+                    sum2 = sum2 - Math.Round(Convert.ToDouble(textBox3.Text),2);/////edwwwwwwwwwwwwwwwwwwww
 
 
                 }
@@ -1229,7 +1229,7 @@ namespace gspot
                                 }
                                 else
                                 {
-                                    sum2 = sum2 - sum3;
+                                    sum2 = sum2 - Math.Round(sum3,2);
                                 }
                                 //sum2 = sum2 - Convert.ToDouble(dgRow2.Cells[i].Value.ToString());
                             }
@@ -1238,7 +1238,7 @@ namespace gspot
 
                     }
                 }
-                textBox4.Text = sum2.ToString();
+                textBox4.Text = (Math.Round(sum2, 2).ToString());/////////////////////////////////////////////////////////////////////////////////////////////edw itan to lathos
 
             }
 
