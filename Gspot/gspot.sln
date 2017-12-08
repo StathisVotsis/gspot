@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gspot", "gspot\gspot.csproj", "{5218AB8C-AA6C-4773-AE86-0BA55967758E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{F95176CC-E0BC-4509-BEA6-5852B470199D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{5218AB8C-AA6C-4773-AE86-0BA55967758E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5218AB8C-AA6C-4773-AE86-0BA55967758E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5218AB8C-AA6C-4773-AE86-0BA55967758E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F95176CC-E0BC-4509-BEA6-5852B470199D}.Debug|Any CPU.ActiveCfg = Debug
+		{F95176CC-E0BC-4509-BEA6-5852B470199D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
