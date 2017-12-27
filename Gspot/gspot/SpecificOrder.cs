@@ -873,7 +873,7 @@ namespace gspot
             catch (Exception) { }
             if (flag1 == 1 && flag2 == 1)
             {
-                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query = "update evotsis_gspot.Customers set SURNAME = '" + textBox6.Text + "',NAME = '" + textBox7.Text + "' ,AFM = '" + textBox8.Text + "' ,ADRESS = '" + textBox9.Text + "' ,CITY = '" + textBox10.Text + "' ,PHONE = '" + textBox11.Text + "' ,CELL = '" + textBox12.Text + "' ,FAX = '" + textBox13.Text + "' ,EMAIL = '" + textBox14.Text + "' where ID = '" + MyProperty12 + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -894,7 +894,7 @@ namespace gspot
                     MessageBox.Show("1");
                 }
                 //SelectedItem.ToString()
-                string myConnection3 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection3 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 try
                 {
                     MySqlConnection myConn3 = new MySqlConnection(myConnection3);
@@ -926,7 +926,7 @@ namespace gspot
                     {
                         try
                         {
-                            string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                            string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                                                                                                                                   //
                             MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
@@ -993,7 +993,7 @@ namespace gspot
                         {
                             count4 = count3 + 1;
                             /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                             string Query5 = "select ERGASIA from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "' and ID = '" + MyProperty12 + "' and AAP = '" + count4.ToString() + "';";
                             MySqlConnection myConn5 = new MySqlConnection(myConnection5);
                             MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);
@@ -1019,7 +1019,7 @@ namespace gspot
                             if (count5 == 1)
                             {
                                 count5 = 0;
-                                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                                                                                                                                       //
                                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
@@ -1052,7 +1052,7 @@ namespace gspot
                             {
                                 try
                                 {
-                                    string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters                                                                                                      //
+                                    string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters                                                                                                      //
                                     MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                                     MySqlCommand cmd = new MySqlCommand();
                                     cmd = myConn2.CreateCommand();
@@ -1471,7 +1471,7 @@ namespace gspot
         void Fillcombo7()
         {
             double sum = 0;
-            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query5 = "select * from evotsis_gspot.InvoiceData2 where ID = '" + MyProperty12 + "';";
             MySqlConnection myConn5 = new MySqlConnection(myConnection5);
             MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);
@@ -1501,7 +1501,7 @@ namespace gspot
         {
             if (MessageBox.Show("Διαγραφή Παραγγελίας?", "", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection5 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query5 = "delete from evotsis_gspot.InvoiceData1 where AA = '" + MyProperty11 + "';";
                 MySqlConnection myConn5 = new MySqlConnection(myConnection5);
                 MySqlCommand cmdDatabase5 = new MySqlCommand(Query5, myConn5);

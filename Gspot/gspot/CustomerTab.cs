@@ -67,7 +67,7 @@ namespace gspot
         void Fillcombo1()
         {
 
-            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query = "select AA, PARATHRHSEIS, STADIOPARAGGELIAS, HMEROMHNIAPARAGGELIAS, PROKATAVOLH, YPOLOIPO, ID, SYNOLIKOKOSTOS, HMEROMHNIAPARADOSHS  from evotsis_gspot.InvoiceData2 where ID ='" + MyProperty10 + "';";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -302,7 +302,7 @@ namespace gspot
         {
             if (string.IsNullOrEmpty(textBox14.Text) && string.IsNullOrEmpty(textBox15.Text))
             {
-                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query2 = "select YPOLOIPO from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' ;";
                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                 MySqlCommand cmdDatabase2 = new MySqlCommand(Query2, myConn2);
@@ -338,7 +338,7 @@ namespace gspot
             }
             else
             {
-                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query = "select YPOLOIPO from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' and HMEROMHNIAPARAGGELIAS between '" + Convert.ToDateTime(textBox14.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(textBox15.Text).ToString("yyyy-MM-dd") + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -380,7 +380,7 @@ namespace gspot
         {
             if (string.IsNullOrEmpty(textBox11.Text) && string.IsNullOrEmpty(textBox10.Text))
             {
-                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query2 = "select SYNOLIKOKOSTOS from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' ;";
                 MySqlConnection myConn2 = new MySqlConnection(myConnection2);
                 MySqlCommand cmdDatabase2 = new MySqlCommand(Query2, myConn2);
@@ -416,7 +416,7 @@ namespace gspot
             }
             else
             {
-                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query = "select SYNOLIKOKOSTOS from evotsis_gspot.InvoiceData2 where  ID = '" + MyProperty10 + "' and HMEROMHNIAPARAGGELIAS between '" + Convert.ToDateTime(textBox11.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(textBox10.Text).ToString("yyyy-MM-dd") + "';";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -448,7 +448,7 @@ namespace gspot
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query = "update evotsis_gspot.Customers set SURNAME = '" + textBox1.Text + "',NAME = '" + textBox2.Text + "' ,AFM = '" + textBox3.Text + "' ,ADRESS = '" + textBox4.Text + "' ,CITY = '" + textBox5.Text + "' ,PHONE = '" + textBox6.Text + "' ,CELL = '" + textBox7.Text + "' ,FAX = '" + textBox8.Text + "' ,EMAIL = '" + textBox9.Text + "' where ID = '" + MyProperty10 + "';";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);

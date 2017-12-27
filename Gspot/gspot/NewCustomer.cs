@@ -33,7 +33,7 @@ namespace gspot
                 string str7 = textBox7.Text;
                 string str8 = textBox8.Text;
                 string str9 = textBox9.Text;
-                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                 string Query = "insert into evotsis_gspot.Customers (SURNAME,NAME,AFM,ADRESS,CITY,PHONE,CELL,FAX,EMAIL,ID) values('" + textBox2.Text + "','" + textBox1.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox9.Text + "','" + textBox8.Text + "','" + textBox10.Text + "');";
                 MySqlConnection myConn = new MySqlConnection(myConnection);
                 MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -66,7 +66,7 @@ namespace gspot
         void Fillcombo1()
         {
 
-            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query = "select max(NUMBER) from evotsis_gspot.IDNumber;";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);
@@ -86,7 +86,7 @@ namespace gspot
 
             int id2 = id;
             id2 += 1;
-            string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query2 = "insert into evotsis_gspot.IDNumber (NUMBER) values('" + id2 + "');";
             MySqlConnection myConn2 = new MySqlConnection(myConnection2);
             MySqlCommand cmdDatabase2 = new MySqlCommand(Query2, myConn2);

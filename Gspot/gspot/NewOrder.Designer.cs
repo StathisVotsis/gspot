@@ -536,7 +536,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.31959F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.68041F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 259F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 261F));
             this.tableLayoutPanel11.Controls.Add(this.textBox13, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.label18, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.textBox15, 3, 0);
@@ -553,7 +553,7 @@
             // 
             this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.ForeColor = System.Drawing.Color.Red;
-            this.textBox13.Location = new System.Drawing.Point(510, 3);
+            this.textBox13.Location = new System.Drawing.Point(509, 3);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(102, 20);
             this.textBox13.TabIndex = 35;
@@ -564,7 +564,7 @@
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(1021, 6);
+            this.label18.Location = new System.Drawing.Point(1019, 6);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(70, 13);
             this.label18.TabIndex = 64;
@@ -574,7 +574,7 @@
             // 
             this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox15.ForeColor = System.Drawing.Color.Red;
-            this.textBox15.Location = new System.Drawing.Point(1097, 3);
+            this.textBox15.Location = new System.Drawing.Point(1095, 3);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(136, 20);
             this.textBox15.TabIndex = 65;
@@ -585,7 +585,7 @@
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(314, 6);
+            this.label16.Location = new System.Drawing.Point(313, 6);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(190, 13);
             this.label16.TabIndex = 36;

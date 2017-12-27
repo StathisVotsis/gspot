@@ -70,7 +70,7 @@ namespace gspot
         void Fillcombo1()
         {
 
-            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+            string myConnection = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
             string Query = "select SURNAME, NAME, AFM, ADRESS, CITY, PHONE, CELL, FAX, EMAIL, ID from evotsis_gspot.Customers ;";
             MySqlConnection myConn = new MySqlConnection(myConnection);
             MySqlCommand cmdDatabase = new MySqlCommand(Query, myConn);

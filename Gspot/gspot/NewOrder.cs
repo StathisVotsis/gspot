@@ -449,7 +449,7 @@ namespace gspot
                 Fillcombo5();
                 try
                 {
-                    string myConnection3 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                    string myConnection3 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
 
                     string Query3 = "insert into evotsis_gspot.InvoiceData2 (AA,PARATHRHSEIS,STADIOPARAGGELIAS,HMEROMHNIAPARAGGELIAS,PROKATAVOLH,YPOLOIPO,ID,SYNOLIKOKOSTOS,HMEROMHNIAPARADOSHS,SURNAME) values('" + textBox13.Text + "','" + textBox1.Text + "','" + comboBox1.SelectedItem.ToString() + "','" + Convert.ToDateTime(textBox14.Text).ToString("yyyy-MM-dd") + "','" + textBox18.Text + "','" + textBox19.Text + "','" + textBox15.Text + "', '" + textBox16.Text + "', '2000/1/1','" + textBox2.Text + "');";
                     MySqlConnection myConn3 = new MySqlConnection(myConnection3);
@@ -473,7 +473,7 @@ namespace gspot
                             {
                                 try
                                 {
-                                    string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123";//connection parameters
+                                    string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
                                                                                                                                           //
                                     MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
