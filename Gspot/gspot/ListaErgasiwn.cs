@@ -46,7 +46,7 @@ namespace gspot
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             DataView DV = new DataView(dbdataset);
-            DV.RowFilter = string.Format("STADIOPARAGGELIAS LIKE '%{0}%'", textBox1.Text);
+            DV.RowFilter = string.Format("SURNAME LIKE '%{0}%'", textBox1.Text);
             dataGridView1.DataSource = DV;
         }
 
