@@ -33,6 +33,16 @@ namespace gspot
         private void NewOrder2_Load(object sender, EventArgs e)
         {
             textBox11.Text = MyProperty2;
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet54.AdditionalWorks' table. You can move, or remove it, as needed.
+            this.additionalWorksTableAdapter.Fill(this.evotsis_gspotDataSet54.AdditionalWorks);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet53.PrintType' table. You can move, or remove it, as needed.
+            this.printTypeTableAdapter.Fill(this.evotsis_gspotDataSet53.PrintType);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet52.PrintSize' table. You can move, or remove it, as needed.
+            this.printSizeTableAdapter.Fill(this.evotsis_gspotDataSet52.PrintSize);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet51.Ylika7' table. You can move, or remove it, as needed.
+            this.ylika7TableAdapter.Fill(this.evotsis_gspotDataSet51.Ylika7);
+            // TODO: This line of code loads data into the 'evotsis_gspotDataSet50.Work' table. You can move, or remove it, as needed.
+            this.workTableAdapter.Fill(this.evotsis_gspotDataSet50.Work);
         }
 
         private void button5_Click(object sender, EventArgs e)
