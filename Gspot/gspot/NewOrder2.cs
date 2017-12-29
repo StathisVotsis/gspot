@@ -13,18 +13,26 @@ using System.Drawing.Printing;
 
 namespace gspot
 {
-    public partial class NewOrder : Form
+    public partial class NewOrder2 : Form
     {
+
+        public string MyProperty1 { get; set; }
+        public string MyProperty2 { get; set; }
         DateTimePicker oDateTimePicker1 = new DateTimePicker();//calendar 
         CultureInfo provider = CultureInfo.InvariantCulture;
         DataTable dbdataset;
         DataTable dt = new DataTable();
 
-        public NewOrder()
+        public NewOrder2()
         {
             InitializeComponent();
             Fillcombo2();
             Fillcombo4();
+        }
+
+        private void NewOrder2_Load(object sender, EventArgs e)
+        {
+            textBox11.Text = MyProperty2;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -32,20 +40,6 @@ namespace gspot
             this.Close();
             NewOrder myform1 = new NewOrder();
             myform1.Show();
-        }
-
-        private void NewOrder_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet54.AdditionalWorks' table. You can move, or remove it, as needed.
-            this.additionalWorksTableAdapter.Fill(this.evotsis_gspotDataSet54.AdditionalWorks);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet53.PrintType' table. You can move, or remove it, as needed.
-            this.printTypeTableAdapter.Fill(this.evotsis_gspotDataSet53.PrintType);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet52.PrintSize' table. You can move, or remove it, as needed.
-            this.printSizeTableAdapter.Fill(this.evotsis_gspotDataSet52.PrintSize);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet51.Ylika7' table. You can move, or remove it, as needed.
-            this.ylika7TableAdapter.Fill(this.evotsis_gspotDataSet51.Ylika7);
-            // TODO: This line of code loads data into the 'evotsis_gspotDataSet50.Work' table. You can move, or remove it, as needed.
-            this.workTableAdapter.Fill(this.evotsis_gspotDataSet50.Work);
         }
 
         void Fillcombo2()
@@ -149,7 +143,6 @@ namespace gspot
                 MessageBox.Show("Error on saving PLHRWMES");
             }
         }
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -373,11 +366,6 @@ namespace gspot
 
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(textBox14.Text))
@@ -472,7 +460,7 @@ namespace gspot
                                 try
                                 {
                                     string myConnection2 = "datasource=192.168.1.23;port=3306;username=root;password=gspot@123;Character Set=utf8";//connection parameters
-                                                                                                                                          //
+                                                                                                                                                   //
                                     MySqlConnection myConn2 = new MySqlConnection(myConnection2);
 
 
@@ -564,7 +552,6 @@ namespace gspot
 
         private void dataGridView2_Enter(object sender, EventArgs e)
         {
-
             foreach (DataGridViewRow dgRow in dataGridView2.Rows)
             {
                 if (dgRow.Cells[6].Value != null) //Check for null reference
@@ -579,7 +566,6 @@ namespace gspot
 
         private void dataGridView2_KeyUp(object sender, KeyEventArgs e)
         {
-
             if (e.KeyCode == Keys.Enter)
             {
                 foreach (DataGridViewRow dgRow in dataGridView2.Rows)

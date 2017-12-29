@@ -654,7 +654,9 @@ namespace gspot
 
         private void button6_Click(object sender, EventArgs e)
         {
-            NewOrder myform = new NewOrder();
+            NewOrder2 myform = new NewOrder2();
+            myform.MyProperty1 = this.MyProperty10;
+            myform.MyProperty2 = this.MyProperty1;
             myform.Show();
         }
 
